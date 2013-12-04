@@ -21,7 +21,7 @@ eval PGLSOURCE="1"
 eval HSFSOURCE="0"
 ## Hosts File Project ~102,000 lines, 3.0 Mbyte ***6+mb free memory***, (0)
 eval HFPSOURCE="0"
-## Someone Who Cares, 287 Kbyte
+## Someone Who Cares, 287 Kbyte, (1)
 eval SMWCSOURCE="1"
 ##
 ## varibles
@@ -75,7 +75,7 @@ fi
 fi
 
 if [ "$SMWCSOURCE" = "1" ]  ; then
-if wget $SMWCSOURCEFILE-O - >> $GENFILE ; then
+if wget $SMWCSOURCEFILE -O - >> $GENFILE ; then
 logger ADBLOCK Load $SMWCSOURCEFILE
 eval GOTSOURCE="1"
 else
