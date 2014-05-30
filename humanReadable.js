@@ -1,13 +1,11 @@
 (function () {
   //big type is for big numbers i.e. 1234 = 1.2k, 1234567890 = 1.2B
   //bit is for bits/bytes to kb, mb, gb, etc, defaults to bit
-  var bigPrefix = ' kMBTPEZYXWVU', bigKilo = 1000,
-      bitPrefix = ' kMGTPEZYXWVU', bitKilo = 1024;
   function humanReadable(number, type){
-    var prefix = bitPrefix, kilo = bitKilo;
+    var prefix = ' kMGTPEZYXWVU', kilo = 1024;
     if(type && type=='big'){
-      prefix = bigPrefix;
-      kilo = bigKilo;
+      prefix = prefix.replace('G','B');
+      kilo = 1000;
     }
     var retValue = 0;
     if (typeof number == "number") {
