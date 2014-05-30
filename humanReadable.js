@@ -11,7 +11,7 @@
     }
     var retValue = 0;
     if (typeof number == "number") {
-        if (number < bigKilo) {
+        if (number < kilo) {
             retValue = number.toString();
         } else {
             var e = (Math.log(number) / Math.log(kilo)) | 0;
